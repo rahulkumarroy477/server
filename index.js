@@ -62,7 +62,7 @@ async function generateData(params) {
   const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
   const prompt = `Generate 10 rows of JSON data with attributes: ${params}`;
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 5; i++) {
     try {
       const result = await model.generateContent(prompt);
       const response = result.response;
